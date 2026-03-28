@@ -24,31 +24,31 @@ public class Main {
     public static int task1(int n) {
         if (n <= 1) {
             return 0;
-        }
+        } // base case
         int current = n - 1;
-        return (current * current) + task1(n - 1);
+        return (current * current) + task1(n - 1); // time complexity: O(n)
     }
     public static int task2(int n) {
         if (n < 1) {
             return 0;
-        }
+        } // base case
         int[] arr = {1,2,3,4,5,6,7,8,9,10};
         if (n > arr.length) n = arr.length;
         int current1 = arr[n-1];
-        return (current1) + task2(n-1);
+        return (current1) + task2(n-1); // time complexity: O(n)
     }
     public static int task3(int n, int b) {
         if (n < 0) {
-            return 0;
+            return 0;  // base case
         }
-        return (int) (Math.pow(b, n) + task3(n - 1, b));
+        return (int) (Math.pow(b, n) + task3(n - 1, b));  // time complexity: O(n)
     }
     public static void task4(int n, Scanner sc) {
         if (n <= 0) {
             return;
-        }
+        }   // base case
         int current = sc.nextInt();
         task4(n - 1, sc);
-        System.out.print(current + " ");
+        System.out.print(current + " ");   // time complexity: O(n)git add .
     }
 }
