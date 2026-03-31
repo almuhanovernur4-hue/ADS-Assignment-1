@@ -22,10 +22,10 @@ public class Main {
         sc.close();
     }
     public static int task1(int n) {
-        if (n <= 1) {
+        if (n < 1) {
             return 0;
         } // base case
-        int current = n - 1;
+        int current = n;
         return (current * current) + task1(n - 1); // time complexity: O(n)
     }
     public static int task2(int n) {
